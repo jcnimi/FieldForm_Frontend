@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/img/Finca1.png">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  
+  <body class="body_login">
+    <form id="login" name="login" onsubmit="return false">
+      <div class="div_login">
+        <img src="img/Finca1.png" alt="finca logo" class="img_login">
+        <label id="lbluser" for="username">Username</label>
+        <br />
+        <input class="input_login"
+          type="text"
+          id="username"
+          name="username"
+          placeholder=""
+          required
+        />
+        <br />
+
+        <label id="lblpassword" for="password">Password</label>
+        <br />
+        <input class="input_login"
+          type="password"
+          id="password"
+          name="password"
+          required
+          minlength="4"
+          maxlength="50"
+        />
+        <br />
+
+        <input id="btnsubmit" type="submit" value="Connexion" class="btn btn1" />
+      </div>
+    </form>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

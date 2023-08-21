@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/png" href="img/Finca1.png" />
+        <link rel="stylesheet" href="Style/Css/stylecheck.css">
+        <link rel="stylesheet" href="Style/css/bootstrap.css">
+        <link rel="stylesheet" href="Style/css/bootstrap.min.css">
+        <script src="Style/js/bootstrap.bundle.min.js"></script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Finca Field Form</title>
+    </head>
+    <body>
+        
+         
+        <div class="header">        
+            <div one>
+                <img src="img/Finca.png" alt="logo finca">
+            </div>
+            <div two>
+                <h1 style="padding: 30px 90px 5px 40px; color: rgb(111, 137, 158);">FORMULAIRE FIELD OFFICER</h1>
+            </div>   
+            <div>
+                <a href="index.htm" id="decon"> Deconnexion</a>
+                <a   href="" id="user"> User</a>
+                <a  href="" id="branch"> Branche</a>
+            </div>     
+        </div>
+        <div class="container mt-3">
+            <br>
+            <!-- Nav tabs -->
+            <div class="d-flex align-items-start">
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <button class="nav-link active" id="v-pills-form-tab" data-bs-toggle="pill" data-bs-target="#v-pills-form" type="button" role="tab" aria-controls="v-pills-form" aria-selected="true">Form_field</button>
+                    <button class="nav-link" id="v-pills-checklist-tab" data-bs-toggle="pill" data-bs-target="#v-pills-checklist" type="button" role="tab" aria-controls="v-pills-checklist" aria-selected="false">CheckList</button>
+                    <button class="nav-link" id="v-pills-annexe-tab" data-bs-toggle="pill" data-bs-target="#v-pills-annexe" type="button" role="tab" aria-controls="v-pills-annexe" aria-selected="false">Annexes</button><br><br><br><br><br>        
+                </div>
+            <div class="tab-content" id="v-pills-tabContent">
+<!-- CHECKLIST -->
+                    <div class="tab-pane fade" id="v-pills-checklist" role="tabpanel" aria-labelledby="v-pills-checklist-tab" tabindex="0">
+                        <h3 style="color: rgb(88, 97, 102);"> Checklist des documents</h3>
+                    <form method="" action="" id="checklist">  
+                        <div class="conteneur">
+                        <div class="box one"><strong>Document à attacher</strong></div>
+                        <div class="box two"><strong>Agent</strong></div>
+                        <div class="box three"><strong>CCC</strong></div>
+                        <div class="box six"><strong> Joindre le fichier</strong></div>
+                        
+                        <div class="box four">
+                          
+                            <ol>
+                               <li><label><h5>Demande de prêt signé</h5></label>  
+                                    <input class="check" type="checkbox" name="demande" id="dempret_agent" value="1">
+                                    <input class="check" type="checkbox" name="demande" id="dempret_ccc"  value="1">
+                                    <div class="fcheck">
+                                    <label for="demande" class="file-label">
+                                        <input  type="file" id="demande" class="file-input">
+                                        <img src="img/plus_1828817.png" alt="Fichier">
+                                        <span class="file-name"></span>
+                                        
+                                    </label>
+                                    </div>
+                                </li><br />
+    
+                                <li><h5>Pièce d'Identité <h5></li>
+                                  <label> Identité  client(e)</label>
+                                    <input class="check" type="checkbox" name="carteid" id="carteidp_agent">
+                                    <input class="check" type="checkbox" name="carteid" id="carteidp_ccc">
+                                    <div class="check"><input  type="file" id="carteid" class="file-input">
+                                        <label for="carteid" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div>
+                                    
+                                    <br />
+                       
+                                  <label>Identité conjoint(e)</label>
+                                    <input class="check" type="checkbox" name="carteidconj" id="carteidc_agent">
+                                    <input class="check" type="checkbox" name="carteidconj" id="carteidc_ccc">
+                                    <div class="fcheck"><input  type="file" id="carteidconj" class="file-input">
+                                        <label for="carteidconj" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div>
+                                    <br />
+
+                                  <label>Identité garant(e)</label>
+                                    <input class="check" type="checkbox" name="cartegarant" id="carteidg_agent">
+                                    <input class="check" type="checkbox" name="cartegarant" id="carteidg_ccc">
+                                    <div class="fcheck"><input  type="file" id="cartegarant" class="file-input">
+                                        <label for="cartegarant" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div>
+                                    <br />
+                                <li><h5> Document du Business <h5></li>
+                                    <label>RCCM</label>
+                                    <input class="check" type="checkbox" name="rccm" id="rccm_agent">
+                                    <input class="check" type="checkbox" name="rccm" id="rccm_ccc">
+                                    <div class="check"><input  type="file" id="rccm" class="file-input">
+                                        <label for="rccm" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div>
+                                    <br>
+                                    <label> Identification nationale</label>
+                                    <input class="check" type="checkbox" name="idnation" id="idnation_agent">
+                                    <input class="check" type="checkbox" name="idnation" id="idnation_ccc">
+                                    <div class="fcheck"><input  type="file" id="idnation" class="file-input">
+                                        <label for="idnation" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div>
+                                    <br />
+                                    <label>Autorisation d'ouverture</label>
+                                    <input class="check" type="checkbox" name="autouv" id="autouv_agent">
+                                    <input class="check" type="checkbox" name="autouv" id="autouv_ccc">
+                                    <div class="fcheck"><input  type="file" id="autouv" class="file-input">
+                                        <label for="autouv" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div><br />
+                                    <label>Patente</label>
+                                    <input class="check" type="checkbox" name="patente" id="patente_agent">
+                                    <input class="check" type="checkbox" name="patente" id="patente_ccc">
+                                    <div class="fcheck"><input  type="file" id="patente" class="file-input">
+                                        <label for="patente" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div>
+                                    
+                                    <br />
+                                    <label>Permis d'exploitation</label>
+                                    <input class="check" type="checkbox" name="pmea" id="pmea_agent">
+                                    <input class="check" type="checkbox" name="pmea" id="pmea_ccc">
+                                    <div class="fcheck"><input  type="file" id="pmea" class="file-input">
+                                        <label for="pmea" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div>
+                                    <br />
+                                    <label>Autorisation de tranport</label>
+                                    <input class="check" type="checkbox" name="auto_trans" id="autotrans_agent">
+                                    <input class="check" type="checkbox" name="autotrans" id="autotrans_ccc">
+                                    <div class="fcheck"><input  type="file" id="autotrans" class="file-input">
+                                        <label for="autotrans" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div>
+                                    <br />
+                                    <label>Arrêté ministerièl &Lettre de  notification(Ecole, instituts supérieure)</label>
+                                    <input class="check" type="arretmin" name="arretmin" id="arretmin_agent">
+                                    <input class="check" type="arretmin" name="arret_min" id="arretmin_ccc">
+                                    <div class="fcheck"><input  type="file" id="arretmin" class="file-input">
+                                        <label for="arretmin" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div>
+                                    <br />
+                                    <li><h5> Autres document de commerce<h5></li>
+                                    <label>Statut de la société</label>
+                                    <input class="check" type="checkbox" name="statsoc" id="statsoc_agent">
+                                    <input class="check" type="checkbox" name="statsoc" id="statsoc_ccc">
+                                    <div class="fcheck"><input  type="file" id="statsoc" class="file-input">
+                                        <label for="statsoc" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div>
+                                    <br />
+                                    <label>Carte rose </label>
+                                    <input class="check" type="checkbox" name="carteros" id="carteros_agent">
+                                    <input class="check" type="checkbox" name="carteros" id="carteros_ccc">
+                                    <div class="fcheck"><input  type="file" id="carteros" class="file-input">
+                                        <label for="carteros" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div>
+                                    <br />
+                                    <label> Contrôle technique</label>
+                                    <input class="check" type="checkbox" name="contech" id="contech_agent">
+                                    <input class="check" type="checkbox" name="contech" id="contech_ccc">
+                                    <div class="fcheck"><input  type="file" id="contech" class="file-input">
+                                        <label for="contech" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div>
+                                    <br />
+                                    <label>Assurance  Vehicule </label>
+                                    <input class="check" type="checkbox" name="assuranc" id="assuranc_agent">
+                                    <input class="check" type="checkbox" name="assuranc" id="assuranc_ccc">
+                                    <div class="fcheck"><input  type="file" id="assuranc" class="file-input">
+                                        <label for="assuranc" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div>
+                                    <br />
+                                    <label>Certificat d'enregistrement pour le loyer perçu</label>
+                                    <input class="check" type="checkbox" name="certloyer" id="certloyer_agent">
+                                    <input class="check" type="checkbox" name="certloyer" id="certloyer_ccc">
+                                    <div class="fcheck"><input  type="file" id="certloyer" class="file-input">
+                                        <label for="certloyer" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div>
+                                    <br />
+                                    <label>Agréement de la banque centrale pour le transfère de fond</label>
+                                    <input class="check" type="checkbox" name="agrbcc_agent" id="agreement_bcc">
+                                    <input class="check" type="checkbox" name="aagrbcc_ccc" id="agreement_bcc">
+                                    <div class="fcheck"><input  type="file" id="agrbcc" class="file-input">
+                                        <label for="agrbcc" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div>
+                                    <br />
+                                    <label> Autorisation de la zone de santé pour les centres de santé</label>
+                                    <input class="check" type="checkbox" name="autosante" id="autosante_agent">
+                                    <input class="check" type="checkbox" name="autosante" id="autosante_ccc">
+                                    <div class="fcheck"><input  type="file" id="autosante" class="file-input">
+                                        <label for="autosante" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div>
+                                    <br />
+                                <li><h5>  Historique du client<h5></li>
+                                    <label>Rapport de risque (isys)</label>
+                                    <input class="check" type="checkbox" name="isys" id="isys_agent">
+                                    <input class="check" type="checkbox" name="isys" id="isys_ccc">
+                                    <div class="fcheck"><input  type="file" id="isys" class="file-input">
+                                        <label for="isys" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div>
+                                    <br />
+                                    <label for="rapport2403">Rapport 2403</label>
+                                    <input class="check" type="checkbox" name="rap2403" id="rap2403_agent">
+                                    <input class="check" type="checkbox" name="rap2403" id="rapport2403_ccc">
+                                    <div class="fcheck"><input  type="file" id="rap2403" class="file-input">
+                                        <label for="rap2403" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div>
+                                    <br />
+                                    <label>Historique du client hors Finca</label>
+                                    <input class="check" type="checkbox" name="histohfin" id="histohfin_agent">
+                                    <input class="check" type="checkbox" name="histohfin" id="histohfin_ccc">
+                                    <div class="fcheck"><input  type="file" id="histohfin" class="file-input">
+                                        <label for="histohfin" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div><br /> 
+                                <li><h5> Autres documents du dossier<h5></li>
+                                    <label>Copie  du certificat d'enregistrement (gage)</label>
+                                    <input class="check" type="checkbox" name="certcopie" id="certcopie_agent">
+                                    <input class="check" type="checkbox" name="certcopie" id="certcopie_ccc">
+                                    <div class="fcheck"><input  type="file" id="certcopie" class="file-input">
+                                        <label for="certcopie" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div>
+                                    <br />
+                                    <label>Copie des documents des biens mis en gage (carte rose & autres)</label>
+                                    <input class="check" type="checkbox" name="copiegage" id="copiegage_gage">
+                                    <input class="check" type="checkbox" name="copiegage" id="copiegage_gage">
+                                    <div class="fcheck"><input  type="file" id="copiegage" class="file-input">
+                                        <label for="copiegage" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div>
+                                    <br />
+                                    <label> Autre documents d'analyse (Cahier de vente,de versement, etc)</label>
+                                    <input class="check" type="checkbox" name="docanalyse" id="docanalyse_agent">
+                                    <input class="check" type="checkbox" name="docanalyse" id="docanalyse_ccc">
+                                    <div class="fcheck"><input  type="file" id="docanalyse" class="file-input">
+                                        <label for="docanalyse" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div>
+                                    <br />
+                                    <label for="doc_garant">Document business du garant ou fiche de paie  (si applicable)</label>
+                                    <input class="check" type="checkbox" name="garantdoc" id="garantdoc_agent">
+                                    <input class="check" type="checkbox" name="garantdoc" id="garantdoc_ccc">
+                                    <div class="fcheck"><input  type="file" id="garantdoc" class="file-input">
+                                        <label for="garantdoc" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div>
+                                    <br />
+                                    <label>Formulaire Excel de recolte des données sur le prêt.</label>
+                                    <input class="check" type="checkbox" name="formexcel" id="formexcel_agent">
+                                    <input class="check" type="checkbox" name="formexcel" id="formexcel_ccc">
+                                    <div class="fcheck"><input  type="file" id="formexcel" class="file-input">
+                                        <label for="formexcel" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div>
+                                    <br />
+                                    <label>Approbation Exception & Memo (si necessaire)</label>
+                                    <input class="check" type="checkbox" name="exception" id="exception_agent">
+                                    <input class="check" type="checkbox" name="exception" id="exception_ccc">
+                                    <div class="fcheck"><input  type="file" id="exception" class="file-input">
+                                        <label for="exception" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div>
+                                    <br />
+                                <li><label><h5>Carte (MAP) du business</h5></label>  
+                                    <input class="check" type="checkbox" name="mappbus" id="mappbus_agent">
+                                    <input class="check" type="checkbox" name="mappbus" id="mappbus_ccc">
+                                    <div class="fcheck"><input  type="file" id="mappbus" class="file-input">
+                                        <label for="mappbus" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div>
+                                </li><br />
+                                <li><label><h5>Formulaire de suivi et supervision signé</h5></label>  
+                                    <input class="check" type="checkbox" name="suivi" id="fichesuivi_agent">
+                                    <input class="check" type="checkbox" name="fichesuivi_ccc">
+                                    <div class="fcheck"><input  type="file" id="fichesuivi" class="file-input">
+                                        <label for="fichesuivi" class="file-label">
+                                            <img src="img/plus_1828817.png" alt="Fichier">
+                                            <span class="file-name"></span>
+                                        </label>
+                                    </div>
+                                </li><br />
+                               
+                                </ol>
+                            </div> 
+                               
+                               <input type="submit" class="submit" value="Enregistrer" form="checklist" id="submitchecklist">
+                              
+                    </form><br><br>
+                    
+                        </div> 
+                    </div>
+<!-- FIN CHECKLIST -->
+
+ <!-- Formulaire-->
+                    <div class="tab-pane fade show active" id="v-pills-form" role="tabpanel" aria-labelledby="v-pills-form-tab" tabindex="0">
+                        <div class="input-group mb-3">
+                         
+                            <div id="accordion">
+
+<!--1 Formulaire info client --> 
+                                <div class="card">
+                 
+                                    <div class="card-header">
+                                        <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+                                            <strong>I. Information générale sur le demandeur de prêt</strong>
+                                        </a>
+                                    </div>
+
+                                    <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
+                                        <div class="card-body">
+                                   
+                                            <form action="" method="" for="submitprospect"></form>
+                                                <input type="hidden" name="hid_prospect_edit" id="hid_prospect_edit" value="" />
+                                                <input type="hidden" name="hid_prospect_id" id="hid_prospect_id" value="" />
+                                                <div class="row">
+                                                    <div class="col"> 
+                                                        <label for="customer_number">Numero RIM</label>
+                                                        <input type="text" class="form-control" placeholder="RIM" name="customer_number" id="customer_number">
+                                                    </div>
+                                                    <div class="col">
+                                                        <label for="name_prospect">Nom complet</label>
+                                                        <input type="text" class="form-control" placeholder="Nom complet (Nom, Postnom & Prénom)" name="name_prospect" id="name_prospect" required><br>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <label for="birthday_prospect">Date de naissance</label>
+                                                        <input type="date" class="form-control" placeholder="Date de Naissance" name="birthday_prospect" id="birthday_prospect" required> <br>
+                                                    </div>
+                                                    <div class="col">
+                                                        <label for="genre_prospect">Genre</label>
+                                                        <select  class="form-select"  name="genre_prospect" id="genre_prospect" required>
+                                                            <option value="">Sélectionner le genre</option>
+                                                           <option value="M">Masculin</option>
+                                                           <option value="F">Feminin</option>
+
+                                                        </select><br>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <label for="id_type_prospect">Type ID</label>
+                                                        <select class="form-select" name="id_type_prospect" id="id_type_prospect">
+                                                            <option value="">Sélectionner</option>
+                                                            <option value="electeur">Carte d'Electeur</option>
+                                                            <option value="identite">Carte d'identité</option>
+                                                            <option value="permis">Permis de conduire</option>
+                                                            <option value="passeport">Passeport</option>
+                                                            <option value="autre">Autres</option>
+
+                                                        </select><br>
+                                                    </div>
+                                                    <div class="col">
+                                                        <label for="id_number_prospect">Numéro ID</label>
+                                                        <input type="" class="form-control" placeholder="N° ID:" name="id_number_prospect" id="id_number_prospect" required><br>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <label for="adresse_prospect">Adresse domicile</label>
+                                                        <input type="text" class="form-control" placeholder="Adresse du domicile" name="adresse_prospect" id="adresse_prospect"><br>
+                                                    </div>
+                                                    <div class="col">
+                                                        <label for="telephone_prospect">Téléphones</label>
+                                                        <input type="text" class="form-control" placeholder="Téléphones" name="telephone_prospect" id="telephone_prospect" required><br>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <label for="etat_civil_prospect">Etat civil</label>
+                                                        <select class="form-select"  name="etat_civil_prospect" id="etat_civil_prospect">
+                                                           <option value="">Sélectionner</option>
+                                                           <option value="celibataire">Celibataire</option>
+                                                           <option value="marie">Marié(e)</option>
+                                                           <option value="veuf">Veuf(ve)</option>
+                                                           <option value="divorce">Divorcé(e)</option>
+                                                        </select><br>
+                                                    </div>
+                                                    <div class="col">
+                                                        <label for="epouse_prospect">Nom complet du conjoint(e)</label>
+                                                        <input type="text" class="form-control" placeholder="Nom de votre conjoint" name="epouse_prospect" id="epouse_prospect" required><br>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <label for="duree_menage_date">Durée au ménage</label>
+                                                        <input type="date" class="form-control" placeholder="Durée au ménage" name="duree_menage_date" id="duree_menage_date"><br>
+                                                    </div>
+                                                    <div class="col">
+                                                        <label for="cycle_loan_prospect">Cycle de prêt</label>
+                                                        <input type="number" class="form-control" placeholder="Cycle de Prêt" name="cycle_loan_prospect" id="cycle_loan_prospect"><br>
+                                                    </div>
+                                                </div>
+
+                                                <input type="submit" class="submit" value="Enregistrer" id="submitprospect">
+                                           </form>
+                                        </div>
+                                    </div>
+                                </div>
+<!--2 Formulaire pret sollicité --> 
+                                <div id="accordion">    
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+                                                <strong>II. Information sur le prêt solicité</strong>
+                                            </a>
+                                        </div>
+                                        <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                                            <div class="card-body">
+                                                <form action="" method="">
+                                                    <input type="hidden" id="hid_request_edit" value="" />
+                                                    <input type="hidden" id="hid_request_id" value="" />
+                                                    <label for="date_demande">Date de la demande</label>
+                                                    <input type="date" class="form-control" name="date_demande" id="date_demande">
+                                                    <label for="montant_sollicite">Quel montant sollicitez vous ($) ?</label>
+                                                    <input type="number" class="form-control" name="montant_sollicite" id="montant_sollicite">
+                                                    <label for="echeance_pret">Pour combien de mois?</label>
+                                                    <input type="number" class="form-control" name="echeance_pret" id="echeance_pret">
+                                                    <label for="but_pret">Qu'allez vous faire avec l'argent sollicité(But)? </label>
+                                                    <input type="text" class="form-control" name="but_pret" id="but_pret">
+                                                    <label for="repartition_pret">Comment comptez vous utiliser cet argent?</label>
+                                                    <select class="form-select"  name="repartition_pret" id="repartition_pret" required>
+                                                       <option value="">Sélectionner</option>
+                                                       <option value="unique">Tranche unique</option>
+                                                       <option value="multiple">Multiple Tranche</option>
+                                                    </select><br>
+                                                    <label for="contribution_pret">Combien disposez vous personnellement pour realiser votre plan d'investissement ($) ?</label>
+                                                    <input type="text" class="form-control" name="contribution_pret" id="contribution_pret">
+                                                    <label for="rbst_facile">Combien êtes vous capable de rembourser facilement chaque mois ($) ?</label>
+                                                    <input type="text" class="form-control" name="rbst_facile" id="rbst_facile"></br>
+                                                
+                                                    <input type="submit" class="submit" value="Enregistrer" id="submitrequest">
+                                                
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+
+<!--3 Formulaire info business -->  
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+                                            <strong>III. Description de l'activité commerciale</strong>
+                                        </a>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+                  
+                                        <form action="" method="" for="submitbusiness">
+                                            <div class="card-body">
+                                                <input type="hidden"  id="hid_business_edit" value="">
+                                                <input type="hidden"  id="hid_business_id" value="">
+                                                <label for="name_business">Enseigne de l'activité commerciale</label>
+                                                <input type="text" class="form-control" placeholder="Ce qui est écrit devant le business (Ex: Boucherie Gloire à Dieu)" name="name_business" id="name_business">
+                                                <label for="activite1">Activité 1</label>
+                                                <input type="text" class="form-control" placeholder="Type de l'activite (Ex: Alimentation)" name="activite1" id="activite1">
+                                                <label for="activite2">Activité 2</label>
+                                                <input type="text" class="form-control" placeholder="Type de l'activite (Ex: boucherie)" name="Activite2" id="activite2">
+                                                <label for="activite3">Activité 3</label>
+                                                <input type="text" class="form-control" placeholder="Type de l'activite (Ex: pharmacie)" name="activite3" id="activite3">
+                                                <label for="adress_business">Adresse de votre activité commerciale</label>
+                                                <textarea class="form-control" name="adress_business" id="adress_business" cols="30" rows="2"></textarea>
+                                                <label for="point_vente">Nombre de points de vente</label>
+                                                <input type="text" class="form-control" name="point_vente" id="point_vente">
+                                                <fieldset class="form-control">
+                                                    <label>Etes vous le seul propriétaire  de votre activité commerciale?:</label><br><br>
+                                                    <div>
+                                                        <input class="form-check-input" type="radio" name="partenaire_business"  value="1" id="partenaire_business_oui">
+                                                        <label for="partenaire_business_oui">Oui</label>
+                                                        <input class="form-check-input" type="radio"  name="partenaire_business" value="0" id="partenaire_business_non">
+                                                         <label for="partenaire_business_non">Non</label><br>
+                                                    </div>
+                                                </fieldset>
+                                            
+                                                <label for="noms_partenaires">Si non, les noms et  part sociales de partenaires</label>
+                                                <input type="text" class="form-control" name="noms_partenaires" id="noms_partenaires"></label>
+
+                                                <label for="duree_activite">Durée de l'activité</label>
+                                                <input type="date" class="form-control" name="duree_activite" id="duree_activite"></label>
+
+                                                <label for="date_experience_business">Durée de l'experience dans l'activité commerciale:</label>
+                                                <input type="date" class="form-control" name="date_experience_business" id="date_experience_business"></label>
+                                                
+                                                <label for="statut_business">Etes-vous propriétaire ou locataire au business</label>
+                                                <select class="form-select" name="statut_propriete_bus" id="statut_propriete_bus">
+                                                    <option value="">Sélectionner</option>
+                                                    <option value="locataire">Locataire</option>
+                                                    <option value="proprietaire">Propriétaire</option>
+                                                    <option value="famille">Parcelle familiale</option>
+                                                </select>
+                                                <p></p>
+                                                <fieldset class="form-control">
+                                                    <label>Votre activité est-elle enregistrée legalement ?</label><br><br>
+                                                    <input class="form-check-input" type="radio" name="enregistrement_legal" value="1" id="enreg_legal_oui">
+                                                    <label for="enreg_legal_oui">Oui</label>
+                                                    <input class="form-check-input" type="radio"  name="enregistrement_legal" value="0" id="enreg_legal_non">
+                                                    <label for="enreg_legal_non">Non</label>                                                
+                                                </fieldset>
+                                                <p></p>
+                                                <fieldset class="form-control">
+                                                    <label>Pouvez vous presenter les originaux ?</label><br><br>
+                                                    <input class="form-check-input" type="radio" name="original_doc_business" id="original_doc_business_oui" value="1">
+                                                    <label for="original_doc_business_oui">Oui</label>
+                                                    <input class="form-check-input" type="radio"  name="original_doc_business" id="original_doc_business_non" value="0">
+                                                    <label for="original_doc_business_non">Non</label>
+                                                </fieldset>
+                                                
+                                                <label for="type_doc_business">Si Oui, de quels documents d'enregistrement disposez vous ?(Visite terrain)</label>
+                                                <select class="form-select" for="type_doc_business" name="type_doc_business" id="type_doc_business">Si Oui, de quels documents d'enregistrement disposez vous ?(Visite terrain)
+                                                    <option value="">selectionner le document</option>
+                                                    <option value="pmea">Permis d'ouverture de l'activité commerciale</option>
+                                                    <option value="patente">patente</option>
+                                                    <option value="rccm">RCCM</option>
+                                                    <option value="identification_nationale">Identification nationale</option>
+                                                    <option value="autorisation_ouverture">Autorisation d'ouverture</option>
+                                                    <option value="permis_exploitation">Permis d'exploitation</option>
+                                                    <option value="autorisation_tranport">Autorisation de tranport</option>
+                                                    <option value="arrete_ministeriel">Arrêté ministeriel & Lettre de  notification (Ecole, instituts supérieure)</option>
+                                                </select><br>
+
+                                                <fieldset class="form-control">
+                                                    <label for="autre_source_business">Avez-vous autre activité en dehors des activités cités ci-dessus qui vous apportent des revenus (autres sources de revenu)?</label><br><br>
+                                                    <input class="form-check-input" type="radio" name="autre_source_business" id="autre_source_business_oui" value="1">
+                                                    <label for="autre_source_business_oui">Oui</label>
+                                                    <input class="form-check-input" type="radio"  name="autre_source_business" id="autre_source_business_non" value="0">
+                                                    <label for="autre_source_business_non">Non</label>
+                                                </fieldset>
+
+                                                <label for="type_autre_source">Si oui, quel type d'activités ? </label>
+                                                <input type="text" class="form-control" name="type_autre_source" id="type_autre_source">
+
+                                                <label for="duree_autre_source">Depuis combien de temps cette (ces) activités existent elle(s)?</label>
+                                                <input type="date" class="form-control" name="duree_autre_source" id="duree_autre_source">
+
+                                                <label for="revenu_autre_source">Combien pouvez vous estimer le revenu net mensuel de cette activité ?</label>
+                                                <input type="text" class="form-control" name="revenu_autre_source" id="revenu_autre_source">
+
+                                                <label for="historic_organigram_business">Parlez nous brievement de l'historique de votre activité commerciale et de son developpment ? De l'organisation et structure de votre activité?</label>
+                                                <textarea class="form-control" name="historic_organigram_business" id="historic_organigram_business" cols="30" rows="2"></textarea>
+
+                                                <label for="commentaire_business"><b>Commentaires du Field Officer  sur la description de l'activité</b></label>
+                                                <textarea class="form-control" name="commentaire_business" id="commentaire_business" cols="30" rows="2"></textarea>
+                                            </div>
+                                         
+                                            <input type="submit" class="submit" value="Enregistrer" id="submitbusiness">
+                                        </form><br>
+                                    </div>
+                                </div>
+                            </div>
+                           
+<! --4 Formulaire experience avec d'autre banque -->  
+                
+                            <div id="accordion">    
+                            <div class="card">
+                                <div class="card-header">
+                                    <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseFour">
+                                        <strong>IV. Experience avec autre institution financière</strong>
+                                    </a>
+                                </div>
+                              
+                                <div id="collapseFour" class="collapse" data-bs-parent="#accordion">
+                                    <div class="card-body">
+                                        <form action="" method="" for="submitexperiencebanque">
+                                            <input type="hidden"  id="hid_experiencebanque_edit" value="">
+                                            <input type="hidden"  id="hid_experiencebanque_id" value="">
+                                            <fieldset class="form-control">
+                                            <label>Avez-vous de l'experience  avec une autre institution financière en terme d'epargne, de prêt ou autres services  (dans le passé, actuellement) ?</label><br>
+                                            <br>
+                                                <input class="form-check-input" type="radio" name="experience_banque" value="1" id="experience_banque">
+                                                <label for="experience_banque">Oui</label>
+                                                <input class="form-check-input" type="radio"  name="experience_banque" value="0" id="experience_banque">
+                                                <label for="experience_banque">Non</label>
+                                            </fieldset>
+
+                                            <label for="commentaire_banque">Si oui pouvez vous expliquer?</label><br>
+                                            <input type="text" class="form-control" name="commentaire_banque" id="commentaire_banque"></label>
+                                            <fieldset class="form-control">
+                                            <label for="possession_document">Pouvons nous avoir les documents relatifs avec votre relation avec cette institution ?</label><br><br>
+                                            <input class="form-check-input" type="radio" name="possession_document"  value="1" id="possession_document_oui">
+                                            <label for="possession_document_oui">Oui</label>
+                                            <input class="form-check-input" type="radio" name="possession_document" value="0" id="possession_document_non">
+                                            <label for="possession_document_non">Non</label>
+                                              </fieldset>
+                                            <label for="nom_banque">Quel est le nom de cette institution financière ?</label>
+                                            <input type="text" class="form-control" name="nom_banque" id="nom_banque">
+                                            <label for="montant_initial_banque">Quel a été le montant initial de prêt ?</label>
+                                            <input type="text" class="form-control" name="montant_initial_banque" id="montant_initial_banque">
+                                            <label for="echeance_banque">Quelle a été la durée de ce prêt ?</label>
+                                            <input type="text" class="form-control mt-3" name="echeance_banque" id="echeance_banque">
+                                            <label for="date_decaissement_banque">
+                                                Quelle a été la date de decaissement de ce prêt ?
+                                            </label><input type="date" class="form-control" name="date_decaissement_banque" id="date_decaissement_banque">
+                                            <label for="ferme_ou_encours">Est-ce que ce prêt est encore en cours ou est fermé ?</label>
+                                            <select class="form-select" name="ferme_ou_encours" id="ferme_ou_encours">
+                                                <option value="">Sélectionner</option>
+                                                <option value="open">En cours</option>
+                                                <option value="clos">Fermé</option>
+                                            </select><br>
+                                            <label for="info_arrieres_banque">
+                                                Quelles sont les informations sur les arriérés?
+                                            </label><input type="text" class="form-control" name="info_arrieres_banque" id="info_arrieres_banque">
+                                            <label for="score_banque">
+                                                Quel est son score final lié à son crédit initial?
+                                            </label><input type="text" class="form-control" name="score_banque" id="score_banque">
+
+                                            <label><b>Prière de completer l'annexe sur la relation avec les institutions Financières A.1</b></label><br>
+
+                                            <input type="submit" class="submit" value="Enregistrer" id="submitexperiencebanque">
+                                        </form>
+                                     </div>
+                                  </div>
+
+                            </div>
+                        </div>
+
+                            
+
+<! --5 Formulaire Information générale sur l'unité familiale su demandeur de prêt -->   
+                            <div id="accordion">    
+                            <div class="card">
+                 
+                                <div class="card-header">
+                                    <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseFive">
+                                        <strong>V. Information générale sur l'unité familiale sur demandeur de prêt</strong>
+                                    </a>
+                                </div>
+
+                                <div id="collapseFive" class="collapse" data-bs-parent="#accordion">
+                                    <div class="card-body">
+                                        <form action="" method="" for="submitfamille">
+                                            <input type="hidden"  id="hid_analysemenage_edit" value="">
+                                            <input type="hidden"  id="hid_analysemenage_id" value="">
+                                            
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text" for="date_analysemen">Date et Heure de la visite du demandeur </label>
+                                                <input type="datetime-local" class="form-control" name="date_analysemen" id="date_analysemen">
+                                            </div>
+                    
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text" for="place_occupation_menage">Quelle place occupez-vous dans votre menage?</label>
+                                                <input type="text" class="form-control" name="place_occupation_menage" id="place_occupation_menage">
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text" for="nombre_menage">Gerez-vous un ou plus de menage?(Polygamie)</label>
+                                                <input type="text" class="form-control" name="nombre_menage" id="nombre_menage">
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text" for="duree_menage">Dépuis quand votre menage vit-il dans la residence actuelle?</label>
+                                                <input type="date" class="form-control" name="duree_menage" id="duree_menage">
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text" for="propriete_maison">Votre famille est-elle proprietaire, locataire ou une parcelle familiale? </label>
+                                                <select class="form-select" name="propriete_maison" id="propriete_maison">
+                                                
+                                                <option value="">Sélectionner</option>
+                                                <option value="locataire">Locataire</option>
+                                                <option value="proprietaire">Propriétaire</option>
+                                                <option value="famille">Parcelle familliale</option>
+                                                
+                                                </select>
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text" for="bailleur_prospect">Si locataire, pouvez-vous avoir le nom du(de)bailleur(esse)?</label>
+                                                <input type="text" class="form-control" id="bailleur_prospect">
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text" for="nombre_personne_menage">Combien de personnes composent votre  menage?</label>
+                                                <input type="text" class="form-control" name="nombre_personne_menage" id="nombre_personne_menage">
+                                            </div>
+                                            <fieldset class="input-group mb-3">
+                                                <label class="input-group-text">Il y a-t-il un membre qui ne vit pas de manière régulière avec vous?</label>
+                                             <input class="form-check-input sm" type="radio" name="membre_dehors_menage" value="1" id="membre_dehors_menage_oui">
+                                               <label for="membre_dehors_menage_oui">Oui</label>
+                                             <input class="form-check-input sm" type="radio"  name="membre_dehors_menage" value="0"l id="membre_dehors_menage_non">
+                                               <label for="membre_dehors_menage_non">Non</label><br>
+                                            </fieldset>
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text" for="raison_dehors_menage">Si oui, pourquoi?</label>
+                                                <input type="text" class="form-control" name="raison_dehors_menage" id="raison_dehors_menage">
+                                            </div>
+                                            <fieldset class="input-group mb-3">
+                                                <legend class="input-group-text">Pouvons-nous avoir noms,âges,type de relation et travail de membres de votre ménage?</legend>
+                                                &ensp;
+                                             <input class="form-check-input" type="radio" name="noms_comsposition_menage_q"  value="1" id="noms_comsposition_menage_q_oui">
+                                              <label for="noms_comsposition_menage_q_oui">Oui</label>
+                                             <input class="form-check-input" type="radio"  name="noms_comsposition_menage_q" value="0" id="noms_comsposition_menage_q_non">
+                                             <label for="noms_comsposition_menage_q_non">Non</label>
+                                            </fieldset>
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text" for="membre_avec_revenu">Qui d'entre les membres de votre menage a un revenu? son revenu mensuel?</label>
+                                                <input type="text" class="form-control" name="membre_avec_revenu" id="membre_avec_revenu">
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text" for="travail_conjoint">Quel est le travail de votre conjoint(e)? (à preciser s'il vous plaît)</label>
+                                                <input type="text" class="form-control" name="travail_conjoint" id="travail_conjoint">
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text" for="revenu_conjoint">Combien estimez-vous en moyenne le revenu (quotidien, hebdomadaire <br> ou mensuel)  de votre conjoint? Et comment justifiez-vous cela ?</label>
+                                                <input type="text" class="form-control" name="revenu_conjoint" id="revenu_conjoint">
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text" for="revenu_regulier_membre">
+                                                    y a-t-il un revenu regulier  d'un autre  membre en <br>dehors de vous et de votre conjoint? Si oui, preciser?
+                                                </label>
+                                                <input type="text" class="form-control" name="revenu_regulier_membre" id="revenu_regulier_membre">
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text" for="membre_qui_contribue">Qui contribue aux dépenses de la famille et quel <br>est son revenu net et sa part dans la contribution?</label>
+                                                <input type="text" class="form-control" name="membre_qui_contribue" id="membre_qui_contribue">
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text" for="hauteur_contribution_membre">A quel hauteur ou % prenez vous en charge le <br> total des depenses familiales de votre menage ?</label>
+                                                <input type="text" class="form-control" name="hauteur_contribution_membre" id="hauteur_contribution_membre">
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <label class="input-group-text" for="nourriture_famille">Comment faites vous pour l'alimentation du menage? <br>(depenses de nourriture )?</label>
+                                                <input type="text" class="form-control" name="nourriture_famille" id="nourriture_famille">
+                                            </div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="cuisson_famille">Combien depensez-vous pour  le gaz, la braise ou <br> combustible pour la cuisson quotidienne à la maison?</label>
+                                                <input type="text" class="form-control" name="cuisson_famille" id="cuisson_famille"></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="loyer_famille">Le  loyer  vous coûte combien chaque Mois ?  A quelle date <br> du mois, le payez vous generalement?</label>
+                                                <input type="text" class="form-control" name="loyer_famille" id="loyer_famille"></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="transport_famille">A combien s’élève le total des frais de transport de la famille au courant d’un mois?</label>
+                                                <input type="text" class="form-control" name="transport_famille" id="transport_famille"></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="communication_famille">A combien s'élève le coût de communication de toutes les personnes à charge de la famille?</label>
+                                                <input type="text" class="form-control" name="communication_famille" id="communication_famille"></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="vetement_famille">A Combien s'eleve la depense liée à l'habillement?</label>
+                                                <input type="text" class="form-control" name="vetement_famille" id="vetement_famille"></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="education_famille">Le nombre de personnes qui fréquentent l’école? Les ecoles ou universités <br> publiques ou privées? Le montant total des frais de scolarité et la durée du paiement</label>
+                                                <input type="text" class="form-control" name="education_famille" id="education_famille"></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="sante_famille">Quels sont les frais de consultation generalement payés, les depenses de medicaments ?</label>
+                                                <input type="text" class="form-control" name="sante_famille" id="sante_famille"></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="iservice_famille">Le montant de paiement des factures de l'eau et de l'electricité, et autres services publics ou privés?</label>
+                                                <input type="text" class="form-control" name="service_famille" id="service_famille"></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="autres_depense_famille">Combien depensez vous pour les autres dépenses (coiffure, <br>achat des produits de nettoyage, assistance familiale, etc)?</label>
+                                                <input type="text" class="form-control" name="autres_depense_famille" id="autres_depense_famille"></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="imprevus_famille">Quel pourcentage pouvez vous estimer des  depenses  imprevues <br> sur le total des depenses mensuelle de votre menage ?</label>
+                                                <input type="text" class="form-control" name="imprevus_famille" id="imprevus_famille"></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="loisirs_famille">Combien depensez vous en dehors du menage et de l'activité <br>commerciale ? ( Loisir, passe temps , etc)</label>
+                                                <input type="text" class="form-control" name="loisirs_famille" id="loisirs_famille"></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="premiere_reference_menage">Deux personnes de reference? <br>(Noms, Relation qui vous lie et contact)</label>
+                                                <input type="text" class="form-control" name="premiere_reference_menage" id="premiere_reference_menage">
+                                                <input type="text" class="form-control" name="seconde_reference_menage" id="seconde_reference_menage"></div>
+                                            <small><i>Prière de completer l'annexe relatif à la composition familiale A.2<br>Prière de completer l'annexe relatif à la liste des depenses familiales A.3"</i></small>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="comment_menage">Commentaires du Field Officer sur la descrition du ménage du(de la) client(e) ou et son impression sur le demandeur <br> en tant qu'une personne privée? ( situation sociale, stabilité familiale, reputation et integrité)</label>
+                                                <textarea class="form-control" name="comment_menage" id="comment_menage" cols="30" rows="2"></textarea></div>
+                                        
+                                            <input type="submit" class="submit" value="Enregistrer" id="submitfamille">
+                                     </div>
+                                  </div>
+                               </div>
+                            </div>
+<! --6 Formulaire nformation financière sur les actifs et les dettes de l'activité commerciale -->   
+                             
+                            <div id="accordion">    
+                            <div class="card">
+                 
+                                <div class="card-header">
+                                    <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseSix">
+                                        <strong>VI. Information financière sur les actifs et les dettes de l'activité commerciale</strong>
+                                    </a>
+                                </div>
+
+                                <div id="collapseSix" class="collapse" data-bs-parent="#accordion">
+                                    <div class="card-body">
+                                        <form action="" method="" for="submitactifdette">
+                                            <input type="hidden" name="hid_businessanalysis_edit" id="hid_businessanalysis_edit">
+                                            <input type="hidden" name="hid_businessanalysis_id" id="hid_businessanalysis_id">
+                                            <div class="input-group mb-3"><label class="input-group-text" for="cash_business">Combien  d'argent  avez-vous  en main maintenant?</label>
+                                                <input type="text" class="form-control" id="cash_business">
+                                                <input type="datetime-local" class="form-control" id="date_cash_business">
+                                            </div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="cash_home">Cash d'argent  avez-vous  en main  à la maison?</label>
+                                                <input type="text" class="form-control" id="cash_home">
+                                                <input type="datetime-local" class="form-control" id="date_cash_home">
+                                            </div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="cash_banque">Combien avez-vous dans votre compte d'epargne en banque?</label>
+                                                <input type="text" class="form-control" id="cash_banque">
+                                                <input type="datetime-local" class="form-control" id="date_cash_banque">
+                                            </div>
+                                            <fieldset class="form-control">
+                                                <legend>Avez vous de rélévé bancaire  justifiant votre solde à la date d'aujourd'hui</legend>
+                                                <input class="form-check-input" type="radio" name="releve_bancaire_question" value="1" id="releve_bancaire_question">
+                                                <label for="releve_bancaire_question">Oui</label>
+                                                <input class="form-check-input" type="radio"  name="releve_bancaire_question" value="0" id="releve_bancaire_question">
+                                                <label for="releve_bancaire_question">Non</label><br>
+                                            </fieldset>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="creance_business_noms">Qui vous doit de l'argent parmi vos clients?</label>
+                                                <input type="text" class="form-control" id="creance_business_noms"><label class="input-group-text" for="montant_creance">Pour quel montant?</label>
+                                                <input type="text" class="form-control" id="montant_creance"></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="explication_trace_creance">Comment gardez vous les traces  de cela?</label>
+                                                <input type="text" class="form-control" id="explication_trace_creance"></input>
+
+                                                <label class="input-group-text">Utilisez vous un cahier ?</label>&ensp;
+                                                <input class="form-check-input" type="radio" name="cahier_creance"  value="1" id="cahier_creance_oui">
+                                                  <label for="cahier_creance_oui">Oui</label>
+                                                <input class="form-check-input" type="radio"  name="cahier_creance" value="0" id="cahier_creance_non">
+                                                  <label for="cahier_creance_non">Non</label><br></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="solde_restant_creance">Si oui quel est le solde restant dû ?</label>
+                                                <input type="text" class="form-control" id="solde_restant_creance">
+                                                <label class="input-group-text" for="frequence_paiement_creance">La frequence des paiements ?</label></input>
+                                                <input type="text" class="form-control" id="frequence_paiement_creance">
+                                                <label class="input-group-text" for="date_paiment_creance">La date  ?</label>
+                                                <input type="date" class="form-control" id="date_paiment_creance"></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="montant_recouvert_unmois">Le montant recouvert surement  dans  1 mois?</label>
+                                                <input type="text" class="form-control" id="montant_recouvert_unmois">
+                                                <label class="input-group-text">Existe-t-il des mauvais payeurs ?</label>
+                                               
+                                                <input class="form-check-input" type="radio" name="statut_creance"  value="1"id="statut_creance">
+                                                 <label for="statut_creance">Oui</label>
+                                                <input class="form-check-input" type="radio"  name="statut_creance" value="0" id="statut_creance">
+                                                <label for="statut_creance">Non</label><br>
+                                            
+                                            </div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="avance_stock_creance">Avez-vous de paiements du stock d’avance auprès de fournisseurs en attente de livraison?</label>&ensp;
+                                                <input class="form-check-input" type="radio" name="avance_stock_creance"  value="1"id="avance_stock_creance">
+                                                &ensp;Oui &ensp;
+                                                <input class="form-check-input" type="radio"  name="avance_stock_creance" value="0">&ensp;Non&ensp;<br/></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="preuve_paiement_stock_creance">Avez-vous des factures ou récus de preuve de paiments?</label>&ensp;
+                                                <input class="form-check-input" type="radio" name="preuve_paiement_stock_creance"  value="1" id="preuve_paiement_stock_creance_oui">
+                                                <label for="preuve_paiement_stock_creance_oui">Oui</label>
+                                                <input class="form-check-input" type="radio"  name="preuve_paiement_stock_creance" value="0" id="preuve_paiement_stock_creance_non">
+                                                 <label for="preuve_paiement_stock_creance_non">Non</label><br></div>
+                    
+                                            <i><small>Prière de completer l'annexe relatif aux creances A.4</small></i>
+                                            <div class="input-group mb-3"><label class="input-group-text"><small>Pouvez-vous enumerer les biens necessaires dont vous disposez dans le cadre de la gestion de votre business?(Référence Annexe) <br>
+                                                Quels prix pourriez vous donné à ces biens par rapport au prix actuel du marché? (Liste des biens,quantité,Prix unitaire, Prix total)</small></label></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="preuve_propriete_biens">Avez-vous des preuves de propriété de ces biens  ou des factures correspondantes ?</label>&ensp;
+                                                <input class="form-check-input" type="radio" name="preuve_propriete_biens"  value="1" id="preuve_propriete_biens_oui">
+                                                 <label for="preuve_propriete_biens_oui">Oui</label>
+                                                <input class="form-check-input" type="radio"  name="preuve_propriete_biens" value="0" id="preuve_propriete_biens_non">
+                                                 <label for="preuve_propriete_biens_non">Non</label><br></div>
+                                            <i><small>Prière de completer l'annexe relatif sur la liste des biens  de l'activité commerciale A.6</small></i>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="commentaire_dette">Pouvez  vous parler  franchement à propos  de vos dettes  afin de pouvoir  nous aider à dresser<br> un plan de remboursement  qui correspondra  tant  à vos besoins qu'à vos obligations existantes?</label>
+                                                <input type="text" class="form-control" id="commentaire_dette"></input></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="commentaire_achat_stock">Comment achetez vous votre stock? (A credit , pour combien, sous quelles conditions )</label>
+                                                <input type="text" class="form-control" id="commentaire_achat_stock"></input></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="commentaire_achat_biens">Comment achetez vous tous ces biens?(A credit? Pour combien? Sous quelles conditions):</label>
+                                                <input type="text" class="form-control" id="commentaire_achat_biens"></input>
+                                            </div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="principal_restant_dette">Quel est le principal restant dû actuel de ces dettes ? (de plus 3 mois) et (au délà de 3 mois):</label><input type="text" class="form-control" id="principal_restant_dette"></input></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="acompte_mensuel_dette">Quel est le montant de votre acompte mensuel des autres institutions financières?</label><input type="text" class="form-control" id="acompte_mensuel_dette"></input></div>
+                    
+                                            <i><small>Si oui, prière de completer l'annexe relatif à la liste des dettes du client A.7	</small></i>
+                    
+                                            <div class="input-group mb-3"><label class="input-group-text" for="commentaire_actif_dette">Commentaire du Field Officer sur les actifs et <br>les dettes du client et de son activité commerciale</label><textarea type="text" class="form-control" id="commentaire_actif_dette"></textarea></div>
+                                            
+                                            <input type="submit" class="submit" value="Enregistrer" id="submitactifdette">
+                    
+                                            </form>
+                                       
+                                  </div>
+                                </div>
+                             </div>
+                          </div>
+<! --7 Formulaire Information financière sur les ventes et les achats de l'activité commerciale -->  
+
+                            <div id="accordion">     
+                            <div class="card">
+                 
+                                <div class="card-header">
+                                    <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseSeven">
+                                        <strong>VII. Information financière sur les ventes et les achats de l'activité commerciale</strong>
+                                    </a>
+                                </div>
+
+                                <div id="collapseSeven" class="collapse" data-bs-parent="#accordion">
+                                    <div class="card-body">
+                                        <form action="" method="" for="submitventeachat">
+                                            <input type="hidden" name="hid_achatvente_edit" id="hid_achatvente_edit">
+                                            <input type="hidden" name="hid_achatvente_id" id="hid_achatvente_id">
+
+                                            <div class="input-group mb-3"><label class="input-group-text" for="jours_open_business">Combien de jours par semaine ouvrez-vous votre activité commerciale?</label>
+                                                <input type="text" class="form-control" name="jours_open_business" id="jours_open_business"></input></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="jours_close_business">Quand est -elle fermée durant la semaine?</label>
+                                                <input type="text" class="form-control" name="jours_close_business" id="jours_close_business"></input></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="px_clients_business">Qui sont vos principaux clients?</label>
+                                                <input type="text" class="form-control" name="px_clients_business" id="px_clients_business"></input></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="vente_bon_jour">Quelles sont les ventes en un bon jour </label>
+                                                <input type="text" class="form-control" name="vente_bon_jour" id="vente_bon_jour">
+                                                <label class="input-group-text" for="vente_mauvais_jour"> Mauvais jour </label>
+                                                <input type="text" class="form-control" name="vente_mauvais_jour" id="vente_mauvais_jour">
+                                                <label class="input-group-text" for="vente_normal_jour">Jour ordinaire?</label>
+                                                <input type="text" class="form-control" name="vente_normal_jour" id="vente_normal_jour">
+                                            </div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="vente_today">Combien avez vous vendu aujourd'hui (jusqu'à l’heure de la visite)</label>
+                                                <input type="text" class="form-control" name="vente_today" id="vente_today"></input></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="vente_hebdomadaire">Quelles ont été les ventes hebdomadaires (jours ouvrables de la semaine)</label>
+                                                <input type="text" class="form-control" name="vente_hebdomadaire" id="vente_hebdomadaire"></input></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="vente_mensuelle">Combien s'elèvent les ventes mensuelles (Considérer les 3 derniers mois)</label>
+                                                <input type="text" class="form-control" name="vente_mensuelle" id="vente_mensuelle"></input></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="localisation_fournisseur">Où vous approvisionnez-vous? (localement ou à l'etranger) ?</label>
+                                                <input type="text" class="form-control" name="localisation_fournisseur" id="localisation_fournisseur"></input></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="noms_fournisseurs">Qui sont vos  principaux fournisseurs ?</label>
+                                                <input type="text" class="form-control" name="noms_fournisseurs" id="noms_fournisseurs"></input></div>
+            <! -- 4 derniers achats -->    <div class="input-group mb-3"><label class="input-group-text" for="">Quels sont les 4 derniers achats que vous avez effectué ?( Date, frequence, lieu, Montant)</label>
+                                                
+                                                <table>
+                                                    <tr><th>Date</th><th>Fréqence</th><th>Lieu</th><th>Montant</th></tr>
+                                                    <tr><td><input type="date" class="form-control" id="date_achat1"></td><td><input type="text" class="form-control" id="frequence_achat1"></td><td><input type="text" class="form-control" id="lieu_achat1"></td><td><input type="text" class="form-control" id="montant_achat1"></td></tr>
+                                                    <tr><td><input type="date" class="form-control" id="date_achat2"></td><td><input type="text" class="form-control" id="frequence_achat2"></td><td><input type="text" class="form-control" id="lieu_achat2"></td><td><input type="text" class="form-control" id="montant_achat2"></td></tr>
+                                                    <tr><td><input type="date" class="form-control" id="date_achat3"></td><td><input type="text" class="form-control" id="frequence_achat3"></td><td><input type="text" class="form-control" id="lieu_achat3"></td><td><input type="text" class="form-control" id="montant_achat3"></td></tr>
+                                                    <tr><td><input type="date" class="form-control" id="date_achat4"></td><td><input type="text" class="form-control" id="frequence_achat4"></td><td><input type="text" class="form-control" id="lieu_achat4"></td><td><input type="text" class="form-control" id="montant_achat4"></td></tr>
+                                                </table><td>
+                                                
+                                            </div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="cahier_vente">Avez-vous de cahier de vente, facture d'achat et autres documents <br> relatifs à l'enregistrement de vos ventes, achats et autres ?</label>&ensp;
+                                                
+                                                <input class="form-check-input" type="radio" name="cahier_vente"  value="1" id="cahier_vente_oui">
+                                                   <label for="cahier_vente_oui">Oui</label>
+                                                <input class="form-check-input" type="radio"  name="cahier_vente" value="0" id="cahier_vente_non">
+                                                   <label for="">Non</label><br>
+                                            </div>
+                                            
+                                                <i><small>Prière de completer l'annexe relatif aux informations sur les achats et les  ventes de l'activité commerciale A.8  </small></i><br>
+                                                <small><i>Prière de completer l'annexe relatif aux informations relatives au quatre derniers achats effectués par le client  A.9</i></small><br>
+                    
+                                            <input type="submit" class="submit" value="Enregistrer" id="submitventeachat">
+                                            
+                                            </form>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+<! --8 Formulaire Informations sur les dépenses operationnelles de l'activité -->  
+
+                            <div id="accordion">
+
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseEight">
+                                            <strong>VIII. Informations sur les dépenses operationnelles de l'activité</strong><br>
+                                        </a>
+                                    </div>
+                                    <div id="collapseEight" class="collapse" data-bs-parent="#accordion">
+                                        <div class="card-body">
+                                            <form action="" method="" for="submitdepensebusiness">
+                                                <input type="hidden" name="hid_depensebusiness_edit" id="hid_depensebusiness_edit">
+                                                <input type="hidden" name="hid_depensebusiness_id" id="hid_depensebusiness_id">
+
+                                                <div class="input-group mb-3"><label class="input-group-text" for="transport_navette_business">Combien dépensez-vous pour  la navette entre votre maison et l'activité?</label>
+                                                    <input type="text" class="form-control" name="transport_navette_business" id="transport_navette_business"></input></div>
+                                                <div class="input-group mb-3"><label class="input-group-text" for="transport_marchandise">Combien dépensez-vous pour le transport de marchandises?</label>
+                                                    <input type="text" class="form-control" name="transport_marchandise" id="transport_marchandise"></input></div>
+                                                <div class="input-group mb-3"> <label class="input-group-text" for="loyer_business">Combien depensez vous pour le loyer du business?</label>
+                                                    <input type="text" class="form-control" name="loyer_business" id="loyer_business"></input>
+                                                </div>
+                                                <div class="input-group mb-3"> <label class="input-group-text" for="comm_dep_business">Combien depensez vous pour la communication du business?</label>
+                                                    <input type="text" class="form-control" name="comm_dep_business" id="comm_dep_business"></input>
+                                                </div>
+                                                <div class="input-group mb-3"> <label class="input-group-text" for="services_dep_business">Combien depensez vous pour les services du business?</label>
+                                                    <input type="text" class="form-control" name="services_dep_business" id="services_dep_business"></input>
+                                                </div>
+                                                <div class="input-group mb-3"> <label class="input-group-text" for="taxes_dep_business">Combien depensez vous pour les taxes du business?</label>
+                                                    <input type="text" class="form-control" name="taxes_dep_business" id="taxes_dep_business"></input>
+                                                </div>
+                                                <div class="input-group mb-3"> <label class="input-group-text" for="autres_dep_business">Les autres depenses importantes de votre activité commerciale?</label>
+                                                    <input type="text" class="form-control" name="autres_dep_business" id="autres_dep_business"></input>
+                                                </div>
+                                                <div class="input-group mb-3"><label class="input-group-text" for="depenses_six_derniers_mois">Des grandes dépenses d'investissements pour le business et <br>en dehors du business ces 6 derniers mois?</label>
+                                                    <input type="text" class="form-control" name="depenses_six_derniers_mois" id="depenses_six_derniers_mois"></input></div>
+    
+                                                <i><small>Prière de completer l'annexe relatif aux depenses mensuelles de l'activité commerciale A.11</small></i>
+                                             
+                                                <input type="submit" class="submit" value="Enregistrer" id="submitdepensebusiness">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+<! --9 Identification et mitigation de risque sur le client, son business, sa famille et autres -->  
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseNine">
+                                          <strong>IX. Identification et mitigation de risque sur le client, son business, sa famille et autres</strong>
+                                        </a>
+                                    </div>
+                                    <div id="collapseNine" class="collapse" data-bs-parent="#accordion">
+    
+                                        <form action="" method="" for="submitrisque">
+                                            <input type="hidden" name="hid_risk_edit" id="hid_risk_edit">
+                                            <input type="hidden" name="hid_risk_id" id="hid_risk_id">
+
+                                            <div class="card-body">
+                                                <div class="input-group mb-3"><label class="input-group-text" for="difficulte_business">Quelles sont les difficultés et menaces de votre secteur <br> d'activité et  dans le fonctionnement de votre activité?</label>
+                                                    <input type="text" class="form-control" name="difficulte_business" id="difficulte_business"></input></div>
+                                                <div class="input-group mb-3"><label class="input-group-text" for="mesure_business">Quelles sont les mesures que vous prenez <br>pour  attenuer ces difficultés  et menaces?</label>
+                                                    <input type="text" class="form-control" name="mesure_business" id="mesure_business"></input></div>
+                                                <div class="input-group mb-3"><label class="input-group-text" for="pointfort_business">Quels sont les points forts que vous pouvez relever <br>par rapport à votre activité commerciale?</label>
+                                                    <input type="text" class="form-control" name="pointfort_business" id="pointfort_business"></input></div>
+                                                <div class="input-group mb-3"><label class="input-group-text" for="pointfaible_business">Quels sont les  points faibles  que vous pouvez <br> relever par rapport à votre activité commerciale?</label>
+                                                    <input type="text" class="form-control" id="pointfaible_business"></input></div>
+                                                <div class="input-group mb-3"><label class="input-group-text" for="contrainte_business">Quels sont les contraintes que vous pouvez  relever <br> par rapport à votre activité commerciale?</label>
+                                                    <input type="text" class="form-control" name="contrainte_business" id="contrainte_business"></input></div>
+                                                <div class="input-group mb-3"><label class="input-group-text" for="opportunite_business">Quels sont les opportunuités  que vous pouvez  relever <br> par rapport à votre activité commerciale?</label>
+                                                    <input type="text" class="form-control" name="opportunite_business" id="opportunite_business"></input></div>
+                                                <div class="input-group mb-3"><label class="input-group-text" for="risk_name">Quels sont les trois risques  que vous avez identifié et les mecanismes d'atténuation?</label></div>
+                                                <br>
+                                                <table>
+                                                    <tr><th>Risques</th><th>Attenuations</th></tr>
+                                                    <tr><td><input type="text" class="form-control" id="risk1" name="risk1"></td><td><input type="text" class="form-control" id="mitigation1" name="mitigation1"></td></tr>
+                                                    <tr><td><input type="text" class="form-control" id="risk2" name="risk2"></td><td><input type="text" class="form-control" id="mitigation2" name="mitigation2"></td></tr>
+                                                    <tr><td><input type="text" class="form-control" id="risk3" name="risk3"></td><td><input type="text" class="form-control" id="mitigation3" name="mitigation3"></td></tr>
+                                                </table>
+                                                <br>
+                                                <div class="input-group mb-3"><label class="input-group-text" for="commentaire_depense_risk"><i>Commentaire du Field Officer  sur les dépenses et <br> les risques liées à l'activité commerciale</i></label>
+                                                    <textarea type="text" class="form-control" id="commentaire_depense_risk"></textarea></div>
+                                           </div>
+                                           <input type="submit" class="submit" value="Enregistrer" id="submitrisque">
+    
+                                        </form>
+                                  </div>
+                                </div>
+
+<! --10 Informations sur les garanties & autres -->                                                          
+                                <div class="card">
+                                <div class="card-header">
+                                    <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTen">
+                                        <strong>X. Informations sur les garanties & autres </strong>
+                                    </a>
+                                </div>
+                                <div id="collapseTen" class="collapse" data-bs-parent="#accordion">
+                                    <div class="card-body">
+                                        <form action="" method="" for="submitgarantie">
+                                            <input type="hidden" name="hid_garantie_edit" id="hid_garantie_edit">
+                                            <input type="hidden" name="hid_garantie_id" id="hid_garantie_id">
+
+                                            <div class="input-group mb-3"><label class="input-group-text" for="premiere_reference_business">Veuillez citer deux personnes de reference?<br>(Noms, type de relation, adresse et contact)?</label>
+                                                <input type="text" class="form-control" name="premiere_reference_business" id="premiere_reference_business"></input>
+                                                <input type="text" class="form-control" name="seconde_reference_business" id="seconde_reference_business"></input></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="garant_question">Souhaitez vous avoir votre credit avec un garant? </label> &ensp;
+                                                <input class="form-check-input" type="radio" name="garant_question" value="1" id="garant_question_oui">
+                                                 <label for="garant_question_oui">Oui</label>
+                                                <input class="form-check-input" type="radio"  name="garant_question" value="0" id="garant_question_non">
+                                                 <label for="garant_question_non">Non</label>
+                                                <label class="input-group-text" for="nom_garant">Si oui, noms </label><input type="text" class="form-control" name="nom_garant" id="nom_garant"> 
+                                                <label class="input-group-text" for="relation_client_garant"> Type de relation </label><input type="text" class="form-control" name="relation_client_garant" id="relation_client_garant">
+                                                <label class="input-group-text" for="contact_garant">Et contact </label><input type="text" class="form-control" name="contact_garant" id="contact_garant"></input></div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="biens_gage">Quels sont les biens (mobiliers et immobiliers) considérés comme garantie?</label>
+                                                <input type="text" class="form-control" name="biens_gage" id="biens_gage"></input></div>
+                                            <div class="input-group mb-3"><label class="input-group-text">Avez-vous des documents qui prouvent que vous en êtes <br>le propriétaire? (cas de vehicule, parcelle, autres biens )</label>&ensp;
+                                                <input class="form-check-input" type="radio" name="doc_biens_gage" value="1" id="doc_biens_gage_oui">
+                                                 <label for="doc_biens_gage_oui">Oui</label>
+                                                <input class="form-check-input" type="radio"  name="doc_biens_gage" value="0" id="doc_biens_gage_non">
+                                                 <label for="doc_biens_gage_non">Non</label>       
+                                            </div>
+                                            <div class="input-group mb-3"><label class="input-group-text" for="option_garantie">Quelle option preferiez vous  choisir pour garantir votre prêt?</label>
+                                                
+                                                <select class="form-select" name="option_garantie" id="option_garantie">
+    
+                                                    <option value=""> Sélectionner l'option de garantie</option>
+                                                      <option value="A"> 50% de gages physiques + 20% de gage cash</option>
+                                                      <option value="B">25% de gages physiques + 20% de gage cash + Garant</Option>
+                                                      <option value="C">Certificat d'enregistrement avec opposition +10% de gage cash</option>
+                                                    </table>
+    
+    
+                                                </select>
+                                            </div>
+    
+                                            <i><small> Prière de completer l'annexe  relatif aux personnes de reference et au garant A.9<br>Prière de completer l'annexe  relatif aux garanties A.10</small></i>
+                                            
+                                            <input type="submit" class="submit" value="Enregistrer" id="submitgarantie">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                    
+
+
+
+                    </div> 
+                    
+                    
+                </div>
+<! -- annexes -->
+<div class="tab-pane fade" id="v-pills-annexe" role="tabpanel" aria-labelledby="v-pills-annexe-tab" tabindex="0">
+    <div class="input-group mb-3">
+
+    <h5><i>Annexe  sur la relation avec  les institutions financières A.1</i></h5>
+    <h5><i>Annexe relatif à la composition familiale A.2</i></h5>
+    <h5><i>Annexe relatif aux depenses familiales A.3</i></h5>
+    <h5><i>Annexe relatif aux  creances A.4</i></h5>
+    <h5><i>Annexe sur l'inventaire de stock A.5 (la fiche de stock)</i></h5>
+    <h5><i>Annexe sur la liste des biens A.6</i></h5>
+    <h5><i>Annexe relatif  aux dettes A.7</i></h5>
+    <h5><i>Annexe sur les references /garant A.9</i></h5>
+    <h5><i>Annexe sur les  garanties physiques  A.10</i></h5>
+    <h5><i>Biens immobiliers-gage parcellaire, si nécessaire pour le montant de prêt de USD 5000-USD 10000).A.10.2</i></h5>
+    </div>
+
+</div>       
+                
+       </div> 
+      
+
+       
+       <script src="js/script.js"></script>
+       <script type="module" src="js/mainform.js"></script>
+   </body>
+</html>

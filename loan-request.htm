@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Finca field form</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/img/Finca1.png">
+    <link rel="stylesheet" href="css/styles.css">
+    
+  </head>
+    <body>
+        <div class="main">
+            <div class="header">
+                <img src="img/Finca.png" alt="logo finca">
+                <div class="header-right">
+                  <a href="" id="branch">branch</a>
+                  <a href="" id="user">user</a>
+                  <a href="" id="decon">Deconexion</a>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="flex-container">
+                    <div>
+                        <fieldset>
+                            <legend>Recherche</legend>
+                            <label for="critere">Critère:</label>
+                            <select name="critere" id="critere">
+                                <option value="select">Select</option>
+                                <option value="prospect_name">Nom Demandeur</option>
+                                <option value="pret">Id Demande</option>
+                                <option value="prospect_id">Id Demandeur</option>
+                                <option value="date">Date demande</option>
+                              </select>
+                            <label for="valeur" id="lblval">Valeur:</label>
+                            <input type="text" id="valeur">
+                            <label for="date_debut" id="lbldebut" hidden>Date debut:</label>
+                            <input type="date" id="date_debut" name="date_debut" hidden>
+                            <label for="date_fin" id="lblfin" hidden>Date fin:</label>
+                            <input type="date" id="date_fin" name="date_fin" hidden>
+                            <button id="valider">Valider</button>
+                        </fieldset>
+                    </div>
+                    <div class="adddiv" id="adddiv">               
+                    </div>
+                </div>
+                <div>
+      
+                <table id="loans" class="loan_list">
+                    <thead>
+                      <tr>
+                        <th>Actions</th>
+                        <th>N°</th>
+                        <th>Date</th>
+                        <th>Montant</th>	
+                        <th>Echéance</th>
+                        <th>But</th>
+                        <th>Repartition</th>
+                        <th>Contribution</th>
+                        <th>rbst_facile</th>
+                        <th>Demandeur</th>   					
+                      </tr>
+                    </thead>
+                    <tbody id="testBody"></tbody>
+                  </table>
+                  <script>
+                  </script>
+            </div>
+            </div>
+        </div>
+        <script src="js/loan_request.js"></script>
+    </body>
+</html>
