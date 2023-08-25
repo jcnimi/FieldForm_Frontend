@@ -39,3 +39,5 @@ export function todayDate() {
     var today = new Date();
     return today.toISOString().slice(0,10);
 }
+
+
