@@ -8,6 +8,8 @@ btn_submit.addEventListener("click", function(e) {
     password: v_password
   };
 
+  console.log("Body: ", JSON.stringify(obj))
+  
   fetch("https://cdwebapsvr.fincadrc.com:8002/users/login2", {
     method: "POST",
     body: JSON.stringify(obj),
