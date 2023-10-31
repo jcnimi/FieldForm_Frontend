@@ -11,8 +11,7 @@ export async function fetchData(url, requestMethod, bodyContent={})
             cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
             credentials: 'same-origin',
             headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': 'cdwebapsvr.fincadrc.com'
+                'Content-Type': 'application/json'
             }
         }
     } else {
@@ -23,8 +22,7 @@ export async function fetchData(url, requestMethod, bodyContent={})
             cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
             credentials: 'same-origin',
             headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*'
+                'Content-Type': 'application/json'
             }
         }
     }
