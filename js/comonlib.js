@@ -1,7 +1,7 @@
 export async function fetchData(url, requestMethod, bodyContent={})
 {
     //const base_url = 'http://10.64.38.121:7000'; http
-    const base_url = 'https://cdwebapsvr.fincadrc.com:8001';
+    const base_url = 'https://cdwebapsvr.fincadrc.com:8002';
     let response;
     let options;
     if(requestMethod === 'GET' || requestMethod === 'HEAD'){

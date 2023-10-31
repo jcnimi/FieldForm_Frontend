@@ -50,25 +50,33 @@ try {
 
         list_.insertAdjacentHTML("beforeend", `
         <li style="display: flex">
-        <label><h5>${doc.description}</h5></label>  
 
-        <input ${disabledCCC} class="check" type="checkbox" 
-          onclick = "saveCheckListChoice('${doc.description}', '${doc.code_document}')"
+        <div class="col col-sm-5">
+        <label class="form-label form-label-sm"><h6>${doc.description}</h6></label>  
+        </div>
+         
+        <div class="col col-sm-2">
+        <input ${disabledCCC} class="form-check-input" type="checkbox"
+          onclick = "saveCheckListChoice('${doc.code_document}')"
           name="${doc.code_document}" id="${doc.code_document}_cro" value="1" ${checkedStatusCRO}>
-
-        <input ${disabledCRO} class="check" type="checkbox" 
-          onclick = "saveCheckListChoice('${doc.description}', '${doc.code_document}')"
+        </div>
+        <div class="col col-sm-2">
+        <input ${disabledCRO} class="form-check-input col col-sm-2" type="checkbox" 
+          onclick = "saveCheckListChoice('${doc.code_document}')"
           name="${doc.code_document}" id="${doc.code_document}_ccc"  value="1" ${checkedStatusCCC}>
+        </div>
 
+        <div class="col col-sm-3"
         <div class="fcheck">
           <label class="file-label">
             <input  type="file" id="${doc.code_document}_file" class="file-input" onchange="uploadFile('${doc.code_document}')">
             <img src="img/plus_1828817.png" alt="Fichier">
 
-            <span class="file-name"><a href="https://cdwebapsvr.fincadrc.com:8001/customer/loan/file/view/${checkListId}" 
+            <span class="file-name"><a href="https://cdwebapsvr.fincadrc.com:8002/customer/loan/file/view/${checkListId}" 
             id="${doc.code_document}_link">${fileName}</a></span>
             <input type="hidden" value="${checkListId}" id="${doc.code_document}_hid">
           </label>
+          </div>
         </div>
         </li>
       `);  

@@ -1,3 +1,4 @@
+import { catchClause } from "babel-types";
 import { fetchData, todayDate } from "./comonlib.js";
 
 //check session id
@@ -27,20 +28,40 @@ window.addEventListener('load', async function () {
     let usrElt = document.getElementById("user");
     usrElt.innerHTML = group + "/" + name_;
 
-
-    //prospect
+    
     const action = urlParams.get('action');
+    //prospect
     const prospectid = urlParams.get('prospectid');
     document.getElementById("hid_prospect_edit").value = action;
     document.getElementById("hid_prospect_id").value = prospectid;
-
+  
     //request
-    const requestid = urlParams.get('requestid');
+    var requestid = urlParams.get('requestid');
     document.getElementById("hid_request_edit").value = (requestid == 0 ? 'add' : 'edit');
     document.getElementById("hid_request_id").value = urlParams.get('requestid');
 
-    //business
-
+    //if recap
+    if(action === 'recap'){
+        //duplicate form data
+        url = `/customer/loan/prospect/view/${prospectid}`;
+        try{
+            document.body.style.setProperty('cursor', 'progress');
+            const result = await fetchData(url, 'GET');
+            if(result !== null && result.status === 'success'){
+                if(result.hasOwnProperty('data')){
+                    console.log('Prospect: ', result);
+                    action = 'edit';
+                    requestid = result.data[0].pret_sollicite_id;
+                }
+            }
+        }
+        catch(error){
+            console.log(err)
+        }
+        finally{
+            document.body.removeAttribute('style'); 
+        }
+    }
 
     //initialize inputs
     document.getElementById("date_demande").value = todayDate(); 
@@ -64,7 +85,11 @@ window.addEventListener('load', async function () {
                     document.getElementById("adresse_prospect").value = result.data[0].adresse_prospect;
                     document.getElementById("telephone_prospect").value = result.data[0].telephone_prospect;
                     document.getElementById("etat_civil_prospect").value = result.data[0].etat_civil_prospect;
+                    document.getElementById("id_autre_document").value = result.data[0].id_autre_document;
+                    document.getElementById("id_email").value = result.data[0].id_email;
                     document.getElementById("epouse_prospect").value = result.data[0].epouse_prospect;
+                    document.getElementById("naissance_conjoint_date").value = result.data[0].naissance_conjoint_date;
+                    document.getElementById("telephone_conjoint").value = result.data[0].telephone_conjoint;
                     document.getElementById("cycle_loan_prospect").value = result.data[0].cycle_loan_prospect; 
                     document.getElementById("duree_menage_date").value = result.data[0].duree_menage_date;
                 }
@@ -558,8 +583,12 @@ document.getElementById("submitprospect").addEventListener("click", async (e) =>
         const genre_prospect = document.getElementById("genre_prospect").value;
         const etat_civil_prospect = document.getElementById("etat_civil_prospect").value;
         const epouse_prospect = document.getElementById("epouse_prospect").value;
+        const telephone_conjoint = document.getElementById("telephone_conjoint").value;
+        const naissance_conjoint_date= document.getElementById("naissance_conjoint_date").value;
         const cycle_loan_prospect = document.getElementById("cycle_loan_prospect").value;
         const duree_menage_date  = document.getElementById("duree_menage_date").value;
+        const id_autre_document= document.getElementById("id_autre_document").value;
+        const id_email = document.getElementById("id_email").value;
 
         const prospect_data = {
             'action' : action,
@@ -574,8 +603,12 @@ document.getElementById("submitprospect").addEventListener("click", async (e) =>
             'genre_prospect' : genre_prospect,
             'etat_civil_prospect' : etat_civil_prospect,
             'epouse_prospect' : epouse_prospect,
+            'telephone_conjoint' : telephone_conjoint,
+            'naissance_conjoint_date' : naissance_conjoint_date,
             'cycle_loan_prospect' : cycle_loan_prospect,
             'duree_menage_date' : duree_menage_date,
+            'id_autre_document' : id_autre_document,
+            'id_email' : id_email,
             'user_id' : userId
         }
 

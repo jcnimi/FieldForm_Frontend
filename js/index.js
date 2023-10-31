@@ -8,7 +8,7 @@ btn_submit.addEventListener("click", function(e) {
     password: v_password
   };
 
-  fetch("https://cdwebapsvr.fincadrc.com:8001/users/login2", {
+  fetch("https://cdwebapsvr.fincadrc.com:8002/users/login2", {
     method: "POST",
     body: JSON.stringify(obj),
     mode: 'cors', // no-cors, *cors, same-origin

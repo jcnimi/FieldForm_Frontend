@@ -46,7 +46,7 @@
         if(crit === 'date'){
             const debut = document.getElementById("date_debut").value;
             const fin = document.getElementById("date_fin").value;
-            fetch(`https://cdwebapsvr.fincadrc.com:8001/customer/loan/view/date/${debut}/${fin}/${userid}/${accessLevel}`, {
+            fetch(`https://cdwebapsvr.fincadrc.com:8002/customer/loan/view/date/${debut}/${fin}/${userid}/${accessLevel}`, {
                 method: "GET",
                 mode: 'cors', // no-cors, *cors, same-origin
                 cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -69,7 +69,7 @@
             });
         } else {
             const valeur = document.getElementById("valeur").value;
-            fetch(`https://cdwebapsvr.fincadrc.com:8001/customer/loan/view/${crit}/${valeur}/${userid}/${accessLevel}`, {
+            fetch(`https://cdwebapsvr.fincadrc.com:8002/customer/loan/view/${crit}/${valeur}/${userid}/${accessLevel}`, {
                 method: "GET",
                 mode: 'cors', // no-cors, *cors, same-origin
                 cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -149,12 +149,19 @@
         actionsRow.innerHTML =  `<div>
           <span>
             <a href="${base_url}/index-form.htm?userid=${userId}&name=${fullname}&branch=${branch}&group=${group}&requestid=${lineData.id}&prospectid=${lineData.prospect_id}&action=edit">
-                <img src="img/edit_8272589.png" alt="ajouter" width="20px" class="action" title="Modifier formulaire">
+                <img src="img/edit_8272589.png" 
+                 alt="ajouter" width="20px" 
+                 class="action" 
+                 title="Modifier formulaire">
             </a>
           </span>
           <span>
-            <a href="${base_url}/index-form.htm?requestid=${lineData.id}&action=delete" title="Annuler formulaire">
-                <img src="img/delete.png" alt="annuler" width="20px" class="action">
+            <a href="${base_url}/index-form.htm?userid=${userId}&name=${fullname}&branch=${branch}&group=${group}&requestid=${lineData.id}&prospectid=${lineData.prospect_id}&action=recap">
+                <img src="img/add_black.png" 
+                 alt="Nouvelle demande" 
+                 width="20px" 
+                 class="action
+                 title="Nouvelle demande de credit">
             </a>
           </span>
         </div>`
@@ -174,8 +181,8 @@
         let but = row.insertCell(5);
         but.innerHTML = lineData.but;
 
-        let repartition = row.insertCell(6);
-        repartition.innerHTML = lineData.repartition;
+        let statut = row.insertCell(6);
+        statut.innerHTML = lineData.status;
 
         let contribution = row.insertCell(7);
         contribution.innerHTML = lineData.contribution;
@@ -215,11 +222,11 @@
     </a>
     </div>`);
 
-    console.log("after insert html code");
+    //console.log("after insert html code");
 
 
     //get list of request
-    fetch(`https://cdwebapsvr.fincadrc.com:8001/customer/loan/view/all/0/${userid}/${accessLevel}`, {
+    fetch(`https://cdwebapsvr.fincadrc.com:8002/customer/loan/view/all/0/${userid}/${accessLevel}`, {
         method: "GET",
         mode: 'cors', // no-cors, *cors, same-origin
         cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
