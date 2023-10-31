@@ -12,7 +12,7 @@ export async function fetchData(url, requestMethod, bodyContent={})
             credentials: 'same-origin',
             headers: {
                 'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*'
+                'Access-Control-Allow-Origin': 'cdwebapsvr.fincadrc.com'
             }
         }
     } else {
