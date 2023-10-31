@@ -9,9 +9,6 @@ btn_submit.addEventListener("click", async function(e) {
     password: v_password
   };
 
-  console.log("Body: ", JSON.stringify(obj))
-
-
   try {
     const url = `/users/login2`;
     const result = await fetchData(url, 'POST');
