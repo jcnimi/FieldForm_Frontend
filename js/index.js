@@ -11,7 +11,7 @@ btn_submit.addEventListener("click", function(e) {
   fetch("https://cdwebapsvr.fincadrc.com:8002/users/login2", {
     method: "POST",
     body: JSON.stringify(obj),
-    mode: 'cors', // no-cors, *cors, same-origin
+    mode: 'no-cors', // no-cors, *cors, same-origin
     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
     credentials: 'same-origin',
     headers: {
