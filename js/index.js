@@ -11,7 +11,7 @@ btn_submit.addEventListener("click", async function(e) {
 
   try {
     const url = `/users/login2`;
-    const result = await fetchData(url, 'POST');
+    const result = await fetchData(url, 'POST', obj);
     if(result !== null && result.status === 'success'){
       if(result !== null && result.status === 'success'){
         let userId = result.data.user_id;

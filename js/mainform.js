@@ -533,6 +533,7 @@ document.getElementById("customer_number").addEventListener("focusout", async ()
     //     return;
     // }
     let custNo = document.getElementById("customer_number").value;
+    console.log("Customer number : ", custNo)
     const url = '/customer/loan/prospect/orbit/' + custNo;
     try{
         document.body.style.setProperty('cursor', 'progress');
