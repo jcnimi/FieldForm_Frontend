@@ -1,4 +1,3 @@
-import { catchClause } from "babel-types";
 import { fetchData, todayDate } from "./comonlib.js";
 
 //check session id
@@ -75,7 +74,7 @@ window.addEventListener('load', async function () {
             if(result !== null && result.status === 'success'){
                 if(result.hasOwnProperty('data')){
                     console.log('Prospect: ', result)
-                        //set the data
+                    //set the data
                     document.getElementById("customer_number").value = result.data[0].customer_number;
                     document.getElementById("name_prospect").value = result.data[0].name_prospect;
                     document.getElementById("birthday_prospect").value = result.data[0].birthday_prospect;
@@ -541,16 +540,16 @@ document.getElementById("customer_number").addEventListener("focusout", async ()
         if(result !== null && result.status === 'success'){
             if(result.hasOwnProperty('data')){
                 //set the data
-                document.getElementById("name_prospect").value = result.data.NOM_COMPLET;
-                document.getElementById("birthday_prospect").value = result.data.DATE_NAISSANCE;
-                document.getElementById("genre_prospect").value = result.data.GENDER_TY;
-                document.getElementById("id_type_prospect").value = result.data.TYPE_ID;
-                document.getElementById("id_number_prospect").value = result.data.NUMERO_ID;
-                document.getElementById("adresse_prospect").value = result.data.ADDRESS;
-                document.getElementById("telephone_prospect").value = result.data.PHONE;
-                document.getElementById("etat_civil_prospect").value = result.data.MARITAL_ST;
-                document.getElementById("epouse_prospect").value = result.data.NOM_CONJOINT;
-                document.getElementById("cycle_loan_prospect").value = result.data.CYCLE_PRET;
+                document.getElementById("name_prospect").value = result.data.name_prospect;
+                document.getElementById("birthday_prospect").value = result.data.birthday_prospect;
+                document.getElementById("genre_prospect").value = result.data.genre_prospect;
+                document.getElementById("id_type_prospect").value = result.data.id_type_prospect;
+                document.getElementById("id_number_prospect").value = result.data.id_number_prospect;
+                document.getElementById("adresse_prospect").value = result.data.adresse_prospect;
+                document.getElementById("telephone_prospect").value = result.data.telephone_prospect;
+                document.getElementById("etat_civil_prospect").value = result.data.etat_civil_prospect;
+                document.getElementById("epouse_prospect").value = result.data.epouse_prospect;
+                document.getElementById("cycle_loan_prospect").value = result.data.cycle_loan_prospect;
             }
         }
         //document.body.removeAttribute('style'); 
